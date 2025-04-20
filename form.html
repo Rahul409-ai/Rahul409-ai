@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body style="text-align: center;">
+    <form>
+    <label for="name">name</label>
+    <input type="text" id="Name"><br><br>
+
+    <label for="email">Email</label>
+    <input type="email" id="email"><br><br>
+
+    <label for="password">password</label>
+    <input type="password" id="password"><br><br>
+
+
+    <label for="contact">contact no.</label>
+    <input type="number" id="contact"><br><br>
+
+    <input type="button" value="submit"  id="cm" onclick="formsubmit()"><br><br>
+
+   </form>
+
+
+    <script>
+        function formsubmit(){
+        let name = document.getElementById("Name").value;
+
+        let email = document.getElementById("email").value;
+
+        let password = document.getElementById("password").value;
+
+        let contact = document.getElementById("contact").value;
+
+        document.writeln("name is:-", name, "<br>", "email id is:-", email, "<br>", "password is:-", password, "<br>", "contact no.:-", contact);
+        }
+        </script>
+
+        
+        <script>
+    
+            let mycm=document.getElementById("cm");
+            mycm.addEventListener("mouseover",addStyle);
+            mycm.addEventListener("mouseleave",deleStyle);
+        
+        
+            function addStyle(){
+                cm.style.backgroundColor="pink";
+                cm.style.width="60px";
+                cm.style.height="30px";
+                cm.style.color="blue";
+                cm.style.border="5px solid black";
+            }
+        
+            function deleStyle(){
+                cm.style.backgroundColor="red";
+                cm.style.width="100px";
+                cm.style.height="60px";
+                cm.style.color="blue";
+                cm.style.border="5px dotted yellow";
+            }
+                
+         </script>
+       
+
+</html>

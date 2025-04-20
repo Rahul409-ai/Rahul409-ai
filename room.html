@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Rooms</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.room {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.room h3 {
+    color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Hotel</h1>
+    </header>
+    <main>
+        <section id="rooms">
+            <h2>Available Rooms</h2>
+            <div class="room">
+                <h3>Deluxe Room</h3>
+                <p>Price: ₹5000/night</p>
+                <button onclick="selectRoom('Deluxe Room', 5000)">Book Now</button>
+            </div>
+            <div class="room">
+                <h3>Standard Room</h3>
+                <p>Price: ₹3000/night</p>
+                <button onclick="selectRoom('Standard Room', 3000)">Book Now</button>
+            </div>
+            <div class="room">
+                <h3>Suite</h3>
+                <p>Price: ₹8000/night</p>
+                <button onclick="selectRoom('Suite', 8000)">Book Now</button>
+            </div>
+        </section>
+        <section id="selection">
+            <h2>Your Selection</h2>
+            <p id="selected-room">No room selected</p>
+        </section>
+    </main>
+    <script src="">
+        function selectRoom(roomName, price) {
+    const selection = document.getElementById('selected-room');
+    selection.textContent = `You selected the ${roomName} for ₹${price}/night`;
+}
+    </script>
+</body>
+</html>
